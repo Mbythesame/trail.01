@@ -12,9 +12,11 @@ require dirname(__FILE__).'/include/common.inc.php';
 <title>my blog--register</title>
 <link rel="stylesheet" type="text/css" href="style/1/index.css" />
 <link rel="stylesheet" type="text/css" href="style/1/basic.css" />
+<link rel="stylesheet" type="text/css" href="style/1/register.css" />
 </head>
  <?php require ROOT_PATH.'/include/header.inc.php';?>
-<h2>会员注册</h2>
+    <div id=register>
+    <h2>会员注册</h2>
     
     <form method="post" action="register_post.php">
     <dl>
@@ -33,6 +35,7 @@ require dirname(__FILE__).'/include/common.inc.php';
 			<dd><input type="submit" class="submit" value="注册" /></dd>
 		</dl>
     </form>
+    </div>
 <body>
 </body>
 </html>

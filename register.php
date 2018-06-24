@@ -15,11 +15,12 @@ require dirname(__FILE__).'/include/common.inc.php';
 <link rel="stylesheet" type="text/css" href="style/1/register.css" />
 <script type="text/javascript" src="JS/face.js"></script>
 </head>
+<body>
  <?php require ROOT_PATH.'/include/header.inc.php';?>
     <div id=register>
     <h2>会员注册</h2>
     
-    <form method="post" action="register_post.php">
+    <form method="post" name="register" action="post.php">
     <dl>
 			<dt>请认真填写一下内容</dt>
 			<dd> 用 户 名 ：<input type="text" name="username" class="text" />(*必填，至少两位)</dd>
@@ -28,7 +29,7 @@ require dirname(__FILE__).'/include/common.inc.php';
 			<dd>密码提示：<input type="text" name="passt" class="text" />(*必填，至少两位)</dd>
 			<dd>密码回答：<input type="text" name="passd" class="text" />(*必填，至少两位)</dd>
 			<dd>性　　别：<input type="radio" name="sex" value="男" checked="checked" />男 <input type="radio" name="sex" value="女" />女</dd>
-			<dd class="face"><img src="face/f01.jpg" alt="头像选择" onclick="javascript:window.open('face.php','face','width=400,height=400,top=0,left=0')" /></dd>
+			<dd class="face"><input type="hidden" name="face" value="face/f01.jpg" /><img src="face/f01.jpg" alt="头像选择" id="faceimg"/></dd>
 			<dd>电子邮件：<input type="text" name="email" class="text" /></dd>
 			<dd>　Q Q 　：<input type="text" name="qq" class="text" /></dd>
 			<dd>主页地址：<input type="text" name="url" class="text" value="http://" /></dd>
@@ -37,6 +38,6 @@ require dirname(__FILE__).'/include/common.inc.php';
 		</dl>
     </form>
     </div>
-<body>
+
 </body>
 </html>
